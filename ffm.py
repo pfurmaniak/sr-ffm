@@ -11,7 +11,6 @@ moviesDF['rating'] = moviesDF['rating'] > moviesDF['rating'].mean()
 
 y = np.where(moviesDF['rating'].values, 1, 0)
 
-moviesDF = moviesDF.drop('rating', 1)
 xUserId = np.array(['0:{}:1'.format(i) for i in moviesDF['userID'].values])
 xMovieId = np.array(['1:{}:1'.format(i) for i in moviesDF['movieID'].values])
 X = np.stack((xUserId, xMovieId), axis=-1)
