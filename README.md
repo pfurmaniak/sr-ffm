@@ -35,7 +35,7 @@ Model FFM oczekuje natępującego formatu danych wejściowych:
 .
 .
 ```
-Kolumna label to będzie nasza tablice ocen stworzona powyżej. `field` będą stanowiły informacje o użytkowniku oraz filmie a w miejsca `feature` wstawimy po prostu identyfikatory liczbowe tychże. Wartość `value` zawsze będzie stanowiło 1 ze względu na to, że obie te informacje są tylko "kategoriami".
+Kolumna label to będzie nasza tablica ocen stworzona powyżej. `field` będą stanowiły informacje o użytkowniku oraz filmie a w miejsca `feature` wstawimy po prostu identyfikatory liczbowe tychże. Wartość `value` zawsze będzie stanowiła 1 ze względu na to, że obie te informacje są tylko "kategoriami".
 ``` python
 xUserId = np.array(['0:{}:1'.format(i) for i in moviesDF['userID'].values])
 xMovieId = np.array(['1:{}:1'.format(i) for i in moviesDF['movieID'].values])
