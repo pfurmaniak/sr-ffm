@@ -79,7 +79,7 @@ model.fit(param, 'tmp/model.dat')
 model.setSigmoid()
 model.predict('tmp/model.dat', 'tmp/preds.dat')
 ```
-Ponieważ biblioteka zapisuje wynik predykcji na danych testowych do pliku, musimy teraz te dane spowrotem wczytać aby móc wyliczyć metryki.
+Ponieważ biblioteka zapisuje wynik predykcji na danych testowych do pliku, musimy teraz te dane z powrotem wczytać aby móc wyliczyć metryki.
 ``` python
 with open('tmp/preds.dat', 'r') as f:
     y_pred = np.array([float(i) for i in f.readlines()])
